@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div>
+        <form method="post" action="formulario.php">
+            <fieldset>
+                <legend>Conta da Pessoa Usuária</legend>
+                <div>
+                    <label>E-mail</label>
+                    <input type="email" minlength="5" maxlength="100" name="email" id="email" required placeholder="Insira seu e-mail aqui"/>
+                </div>
+                <div>
+                    <label>Senha</label>
+                    <input type="password" minlength="6" maxlength="8" name="password" id="password" required placeholder="Insira sua senha aqui"/>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dados da Pessoa Usuária</legend>
+                <div>
+                    <label>Nome Completo</label>
+                    <input type="text" minlength="3" maxlength="100" name="name" id="name" required placeholder="Insira seu nome aqui"/>
+                </div>
+                <div>
+                    <label>Telefone</label>
+                    <input type="text" minlength="8" maxlength="20" name="phone" id="phone" required placeholder="Insira seu telefone aqui"/>
+                </div>
+                <div>
+                    <label>Possui github?</label>
+                    <label for="true">Sim</label>
+                    <input type="radio" checked id="true" name="github" value="true" />
+                    <label for="true">Não</label>
+                    <input type="radio" id="false" name="github" value="false" />
+                </div>
+                <div>
+                    <label>Data de Nascimento</label>
+                    <input type="date" name="birth_date" id="birth_date" required />
+                </div>
+                <div>
+                    <label>Foto de perfil</label>
+                    <input type="file" name="profile" id="profile" required accept="image/*"/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dados de Endereço</legend>
+                <div>
+                    <label>Nome da Rua</label>
+                    <input type="text" minlength="3" maxlength="50" name="street" id="street" required placeholder="Insira os dados da rua aqui"/>
+                </div>
+                <div>
+                    <label>Número da Rua</label>
+                    <input type="number" min="1" max="99999" name="street_number" id="street_number" required placeholder="Insira o número da rua aqui"/>
+                </div>
+                <div>
+                    <label>Complemento</label>
+                    <input type="text" minlength="3" maxlength="50" name="complement" id="complement" required placeholder="Insira o complemento aqui"/>
+                </div>
+                <div>
+                    <label>Cidade</label>
+                    <input type="text" minlength="3" maxlength="50" name="city" id="city" required placeholder="Insira a cidade aqui"/>
+                </div>
+                <div>
+                    <label>Estado</label>
+                    <select name="Estado">
+                        <option value="rs">Rio Grande do Sul</option>
+                        <option value="sc">Santa Catarina</option>
+                        <option value="pr">Paraná</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Informações Adicionais</legend>
+                <div>
+                    <label>Como você conheceu a empresa?</label>
+                    <textarea name="company" id="company" required maxlength="255" placeholder="Insira sua resposta aqui"></textarea>
+                </div>
+                <div>
+                    <label>Deseja receber informações da empresa?</label>
+                    <br/>
+                    <label>SMS</label>
+                    <input type="checkbox" checked name="sms" id="sms" value="sms" />
+                    <br/>
+                    <label>WhatsApp</label>
+                    <input type="checkbox" name="whatsapp" id="whatsapp" value="whatsapp" />
+                </div>
+            </fieldset>
+            <br/>
+            <div>
+                <input type="submit" id="button_form" name="button_form" value="Enviar Dados"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
